@@ -9,6 +9,10 @@ export type Project = {
   year: string;
   tags: string[];
   impact: string;
+  role: string;
+  challenge: string;
+  result: string;
+  tools: string[];
 };
 
 export type Experience = {
@@ -98,7 +102,14 @@ export const projects: Project[] = [
     year: "2025",
     tags: ["EBIOS RM", "RGPD", "AI Act", "Cloud Act", "Power BI", "Data Governance"],
     impact:
-      "Cartographie des flux de données, analyse de risques, évaluation de conformité et création d’un dashboard de gouvernance permettant au comité de direction de piloter ses risques data par des KPI/KRI actionnables."
+      "Cartographie des flux de données, analyse de risques, évaluation de conformité et création d’un dashboard de gouvernance permettant au comité de direction de piloter ses risques data par des KPI/KRI actionnables.",
+    role:
+      "Audit stratégique, cadrage des enjeux, construction de la cartographie des données et recommandations opérationnelles.",
+    challenge:
+      "Démontrer la conformité réglementaire sur des processus métier complexes et proposer un pilotage structuré pour un comité de direction.",
+    result:
+      "Livrables clairs, plan d’actions de conformité et tableau de bord de gouvernance utilisé pour prioriser les actions et suivre les risques.",
+    tools: ["Power BI", "Excel", "EBIOS RM", "RGPD", "AI Act"]
   },
   {
     title: "Programme de gouvernance data \u0026 cybersécurité",
@@ -107,7 +118,14 @@ export const projects: Project[] = [
     year: "2025",
     tags: ["Gouvernance data", "Cybersécurité", "Classification data", "KPI/KRI"],
     impact:
-      "Définition de la stratégie d’accès aux données, classification des informations, formalisation des politiques et mise en place d’un pilotage par KPI/KRI pour sécuriser la croissance et les opérations."
+      "Définition de la stratégie d’accès aux données, classification des informations, formalisation des politiques et mise en place d’un pilotage par KPI/KRI pour sécuriser la croissance et les opérations.",
+    role:
+      "Architecture de gouvernance data et alignement des responsabilités entre IT, métiers et sécurité.",
+    challenge:
+      "Harmoniser des règles de gestion et de sécurité dans un contexte de fusion avec des pratiques très différentes.",
+    result:
+      "Cadre de gouvernance opérationnel, matrice RACI et indicateurs de suivi qui réduisent les risques de rupture et facilitent la prise de décision.",
+    tools: ["Matrice RACI", "Policy Framework", "Data Classification", "KPI/KRI"]
   },
   {
     title: "Application de gestion des contrats juridiques",
@@ -116,7 +134,14 @@ export const projects: Project[] = [
     year: "2025",
     tags: ["React", "Spring Boot", "PostgreSQL", "Design orienté métier"],
     impact:
-      "Conception, développement et déploiement d’une application facilitant le suivi, la traçabilité et la collaboration entre juristes et métiers, avec une structuration claire des données contractuelles."
+      "Conception, développement et déploiement d’une application facilitant le suivi, la traçabilité et la collaboration entre juristes et métiers, avec une structuration claire des données contractuelles.",
+    role:
+      "Design produit, front-end React et intégration avec back-end Java pour un usage métier fluide.",
+    challenge:
+      "Créer un parcours simple pour un suivi contractuel global tout en respectant les contraintes de sécurité et de conformité.",
+    result:
+      "Prototype opérationnel livré, validé par les juristes et prêt à être industrialisé sur la plateforme interne.",
+    tools: ["React", "Spring Boot", "PostgreSQL", "Figma"]
   }
 ];
 

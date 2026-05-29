@@ -226,36 +226,82 @@ export default function HomePage() {
           title="Quelques projets représentatifs."
           subtitle="Sélection de projets académiques et professionnels autour de la data, de la gouvernance et des applications web."
         >
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {projects.map((project) => (
-              <Card key={project.title}>
-                <div className="flex items-center justify-between gap-2">
-                  <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-                    {project.title}
-                  </h3>
-                  <span className="text-xs text-slate-500">{project.year}</span>
-                </div>
+          <div className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-slate-50/90 p-4 shadow-sm shadow-slate-900/5 dark:border-slate-800/80 dark:bg-slate-950/90 dark:shadow-slate-950/20 sm:p-6">
+            <div className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 pr-3 scrollbar-hide">
+              {projects.map((project) => (
+                <Card
+                  key={project.title}
+                  as="section"
+                  className="min-w-[320px] flex-shrink-0 snap-start sm:min-w-[360px]"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <div>
+                      <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                        {project.title}
+                      </h3>
+                      <p className="mt-2 text-[0.8rem] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                        {project.year}
+                      </p>
+                    </div>
+                  </div>
 
-                <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
-                  {project.context}
-                </p>
+                  <p className="mt-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                    {project.context}
+                  </p>
 
-                <p className="mt-3 text-xs leading-relaxed text-slate-700 dark:text-slate-300">
-                  {project.impact}
-                </p>
+                  <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                    <div>
+                      <div className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                        Rôle
+                      </div>
+                      <p className="mt-1 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                        {project.role}
+                      </p>
+                    </div>
 
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-slate-900/90 px-2 py-0.5 text-[0.65rem] text-sky-200 dark:bg-slate-800"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </Card>
-            ))}
+                    <div>
+                      <div className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                        Défi
+                      </div>
+                      <p className="mt-1 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                        {project.challenge}
+                      </p>
+                    </div>
+
+                    <div>
+                      <div className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                        Résultat
+                      </div>
+                      <p className="mt-1 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                        {project.result}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="rounded-full border border-slate-200/80 bg-slate-100 px-3 py-1 text-[0.7rem] font-medium text-slate-700 shadow-sm shadow-slate-900/5 dark:border-slate-800/80 dark:bg-slate-900/80 dark:text-slate-200 dark:shadow-slate-950/10"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-sky-100 px-2.5 py-1 text-[0.7rem] font-semibold text-sky-700 dark:bg-sky-500/15 dark:text-sky-200"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
         </Section>
 
