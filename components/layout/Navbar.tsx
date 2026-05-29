@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -13,8 +14,15 @@ export function Navbar() {
   return (
     <header className="sticky inset-x-0 top-0 z-40 border-b border-slate-200/60 bg-white/80 backdrop-blur dark:border-slate-800/80 dark:bg-slate-950/70">
       <div className="section-container flex h-16 items-center justify-between gap-6">
-        <Link href="#hero" className="group flex items-center gap-2">
-          <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-sky-400 to-indigo-500 opacity-80 transition group-hover:opacity-100" />
+        <Link href="#hero" className="group flex items-center gap-3">
+          <div className="relative h-11 w-11 overflow-hidden rounded-full border border-slate-200/80 bg-white shadow-sm shadow-slate-900/10 dark:border-slate-700/80 dark:bg-slate-950/80">
+            <Image
+              src="/img/bahae-logo.png"
+              alt="Logo Bahae"
+              fill
+              className="object-cover"
+            />
+          </div>
           <div className="flex flex-col leading-none">
             <span className="text-xs uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
               Portfolio
