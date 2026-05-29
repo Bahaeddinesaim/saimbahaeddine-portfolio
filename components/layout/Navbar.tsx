@@ -17,7 +17,7 @@ export function Navbar() {
         <Link href="#hero" className="group flex items-center gap-3">
           <div className="relative h-11 w-11 overflow-hidden rounded-full border border-slate-200/80 bg-white shadow-sm shadow-slate-900/10 dark:border-slate-700/80 dark:bg-slate-950/80">
             <Image
-              src="../public/img/bahae-logo.png"
+              src="../../public/img/bahae-logo.png"
               alt="Logo Bahae"
               fill
               className="object-cover"
