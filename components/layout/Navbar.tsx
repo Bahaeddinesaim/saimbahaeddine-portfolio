@@ -17,7 +17,7 @@ export function Navbar() {
         <Link href="#hero" className="group flex items-center gap-3">
           <div className="relative h-11 w-11 overflow-hidden rounded-full border border-slate-200/80 bg-white shadow-sm shadow-slate-900/10 dark:border-slate-700/80 dark:bg-slate-950/80">
             <Image
-              src="../../public/img/bahae-logo.png"
+              src="${basePath}/img/bahae-logo.png"
               alt="Logo Bahae"
               fill
               className="object-cover"
@@ -49,7 +49,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <a
-            href="/cv/SAIM_Bahaeddine_CV_FR.pdf"
+            href="${basePath}/cv/SAIM_Bahaeddine_CV_FR.pdf"
             download
             className="hidden rounded-full bg-slate-900 px-3 py-1.5 text-xs font-semibold tracking-wide text-slate-50 shadow-md shadow-slate-900/20 transition hover:bg-sky-500 hover:text-slate-950 dark:bg-slate-100 dark:text-slate-950 dark:shadow-sky-500/20 dark:hover:bg-sky-400 sm:inline-flex"
           >
