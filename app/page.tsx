@@ -15,6 +15,7 @@ import {
   projects,
   skillCategories
 } from "@/lib/profile";
+import GalleryCarousel from "@/components/ui/GalleryCarousel";
 
 const basePath =
   process.env.NODE_ENV === "production"
@@ -374,6 +375,7 @@ export default function HomePage() {
                     <li key={item}>• {item}</li>
                   ))}
                 </ul>
+                <GalleryCarousel basePath={basePath} />
               </div>
             </div>
           </div>
