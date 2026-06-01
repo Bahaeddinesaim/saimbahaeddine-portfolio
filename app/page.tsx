@@ -323,6 +323,60 @@ export default function HomePage() {
           </div>
         </Section>
 
+        {/* Works / Small carousels */}
+        <Section
+          id="works"
+          eyebrow="Travaux"
+          title="Petites galeries de réalisations."
+          subtitle="Captures d’écran et prototypes issus de travaux académiques et techniques."
+        >
+          <div className="grid gap-6 xl:grid-cols-2">
+            <Card className="min-h-[420px]">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                    Travaux TB
+                  </h3>
+                  <p className="mt-2 text-[0.8rem] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                    TB1 · TB2 · TB3 · TB4
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <GalleryCarousel
+                  basePath={basePath}
+                  variant="cards"
+                  images={["tb1.png", "tb2.png", "tb3.png", "tb4.png"]}
+                  intervalMs={5000}
+                />
+              </div>
+            </Card>
+
+            <Card className="min-h-[420px]">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">
+                    Captures d’écran
+                  </h3>
+                  <p className="mt-2 text-[0.8rem] uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+                    Ecran1 · Ecran2 · Ecran3
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <GalleryCarousel
+                  basePath={basePath}
+                  variant="cards"
+                  images={["Ecran1.png", "Ecran2.png", "Ecran3.png"]}
+                  intervalMs={5000}
+                />
+              </div>
+            </Card>
+          </div>
+        </Section>
+
         {/* Experience & Education */}
         <Section
           id="experience"

@@ -9,6 +9,7 @@ type Props = {
   basePath?: string;
   count?: number;
   prefix?: string;
+  images?: string[];
   variant?: Variant;
   intervalMs?: number;
 };
@@ -17,6 +18,7 @@ export default function GalleryCarousel({
   basePath = "",
   count = 18,
   prefix = "Parascolaire",
+  images,
   variant = "hero",
   intervalMs = 4500
 }: Props) {
@@ -25,17 +27,22 @@ export default function GalleryCarousel({
     null
   );
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const itemCount = images ? images.length : count;
 
   useEffect(() => {
-    const t = setInterval(() => setIndex((i) => (i + 1) % count), intervalMs);
+    const t = setInterval(() => setIndex((i) => (i + 1) % itemCount), intervalMs);
     return () => clearInterval(t);
-  }, [count, intervalMs]);
+  }, [itemCount, intervalMs]);
 
   // load natural size of current image to adapt container height
   useEffect(() => {
+    if (itemCount === 0) return;
     let cancelled = false;
     const img = new window.Image();
-    img.src = `${basePath}/img/${prefix}-${index + 1}.jpg`;
+    const filename = images
+      ? images[index]
+      : `${prefix}-${index + 1}.jpg`;
+    img.src = `${basePath}/img/${filename}`;
     img.onload = () => {
       if (!cancelled) setNatural({ w: img.naturalWidth, h: img.naturalHeight });
     };
@@ -45,7 +52,7 @@ export default function GalleryCarousel({
     return () => {
       cancelled = true;
     };
-  }, [basePath, prefix, index]);
+  }, [basePath, prefix, images, index, itemCount]);
 
   // compute adaptive height based on container width and natural ratio
   const [heightPx, setHeightPx] = useState<number | undefined>(undefined);
@@ -65,11 +72,14 @@ export default function GalleryCarousel({
     return () => window.removeEventListener("resize", update);
   }, [natural]);
 
-  const prev = () => setIndex((i) => (i - 1 + count) % count);
-  const next = () => setIndex((i) => (i + 1) % count);
+  const prev = () => setIndex((i) => (i - 1 + itemCount) % itemCount);
+  const next = () => setIndex((i) => (i + 1) % itemCount);
 
   const isHero = variant === "hero";
-  const src = `${basePath}/img/${prefix}-${index + 1}.jpg`;
+  const currentFilename = images
+    ? images[index]
+    : `${prefix}-${index + 1}.jpg`;
+  const src = `${basePath}/img/${currentFilename}`;
 
   return (
     <div className={`mt-4 ${isHero ? "" : "pb-6"}`}>
@@ -91,8 +101,11 @@ export default function GalleryCarousel({
 
         {/* Slides (stacked) */}
         <div className="relative h-full w-full">
-          {Array.from({ length: count }).map((_, i) => {
-            const s = `${basePath}/img/${prefix}-${i + 1}.jpg`;
+          {Array.from({ length: itemCount }).map((_, i) => {
+            const imageFilename = images
+              ? images[i]
+              : `${prefix}-${i + 1}.jpg`;
+            const s = `${basePath}/img/${imageFilename}`;
             const isActive = i === index;
             return (
               <div
