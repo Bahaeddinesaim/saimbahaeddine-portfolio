@@ -3,10 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
+type Variant = "hero" | "cards";
+
 type Props = {
   basePath?: string;
   count?: number;
   prefix?: string;
+  variant?: Variant;
   intervalMs?: number;
 };
 
@@ -14,6 +17,7 @@ export default function GalleryCarousel({
   basePath = "",
   count = 18,
   prefix = "Parascolaire",
+  variant = "hero",
   intervalMs = 4500
 }: Props) {
   const [index, setIndex] = useState(0);
@@ -64,13 +68,16 @@ export default function GalleryCarousel({
   const prev = () => setIndex((i) => (i - 1 + count) % count);
   const next = () => setIndex((i) => (i + 1) % count);
 
+  const isHero = variant === "hero";
   const src = `${basePath}/img/${prefix}-${index + 1}.jpg`;
 
   return (
-    <div className="mt-4">
+    <div className={`mt-4 ${isHero ? "" : "pb-6"}`}>
       <div
         ref={containerRef}
-        className="relative mx-auto w-full max-w-full overflow-visible rounded-[1.25rem]"
+        className={`relative mx-auto w-full max-w-full overflow-visible rounded-[1.25rem] ${
+          isHero ? "" : "border border-slate-200/80 bg-slate-50/90 dark:border-slate-800/80 dark:bg-slate-950/90"
+        }`}
         style={{
           // allow adaptive height when we know the image ratio
           height: heightPx ? `${heightPx}px` : undefined
