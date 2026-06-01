@@ -19,7 +19,7 @@ import GalleryCarousel from "@/components/ui/GalleryCarousel";
 
 const basePath =
   process.env.NODE_ENV === "production"
-    ? "/saimbahaeddine.github.io"
+    ? "/saimbahaeddine-portfolio"
     : "";
 
 const cvUrl = `${basePath}/cv/SAIM_Bahaeddine_CV_FR.pdf`;
