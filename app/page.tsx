@@ -196,6 +196,18 @@ export default function HomePage() {
           </div>
         </Section>
 
+        {/* Parascolaire / Galerie */}
+        <Section
+          id="parascolaire"
+          eyebrow="Associatif"
+          title="Activités parascolaires & bénévolat"
+          subtitle="Quelques photos d'événements, actions et engagements associatifs."
+        >
+          <div className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-slate-50/90 p-4 shadow-sm shadow-slate-900/5 dark:border-slate-800/80 dark:bg-slate-950/90 dark:shadow-slate-950/20 sm:p-6">
+            <GalleryCarousel basePath={basePath} count={18} prefix="Parascolaire" />
+          </div>
+        </Section>
+
         {/* Skills */}
         <Section
           id="skills"
@@ -375,7 +387,6 @@ export default function HomePage() {
                     <li key={item}>• {item}</li>
                   ))}
                 </ul>
-                <GalleryCarousel basePath={basePath} />
               </div>
             </div>
           </div>
