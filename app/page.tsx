@@ -26,7 +26,7 @@ const cvUrl = `${basePath}/cv/SAIM_Bahaeddine_CV_FR.pdf`;
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
+      <Navbar basePath={basePath} />
 
       <main id="hero" className="flex-1">
         {/* Hero */}

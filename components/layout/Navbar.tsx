@@ -10,14 +10,18 @@ const NAV_ITEMS = [
   { id: "contact", label: "Contact" }
 ];
 
-export function Navbar() {
+interface NavbarProps {
+  basePath?: string;
+}
+
+export function Navbar({ basePath = "" }: NavbarProps) {
   return (
     <header className="sticky inset-x-0 top-0 z-40 border-b border-slate-200/60 bg-white/80 backdrop-blur dark:border-slate-800/80 dark:bg-slate-950/70">
       <div className="section-container flex h-16 items-center justify-between gap-6">
         <Link href="#hero" className="group flex items-center gap-3">
           <div className="relative h-11 w-11 overflow-hidden rounded-full border border-slate-200/80 bg-white shadow-sm shadow-slate-900/10 dark:border-slate-700/80 dark:bg-slate-950/80">
             <Image
-              src="${basePath}/img/bahae-logo.png"
+              src={`${basePath}/img/bahae-logo.png`}
               alt="Logo Bahae"
               fill
               className="object-cover"
@@ -49,7 +53,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <a
-            href="${basePath}/cv/SAIM_Bahaeddine_CV_FR.pdf"
+            href={`${basePath}/cv/SAIM_Bahaeddine_CV_FR.pdf`}
             download
             className="hidden rounded-full bg-slate-900 px-3 py-1.5 text-xs font-semibold tracking-wide text-slate-50 shadow-md shadow-slate-900/20 transition hover:bg-sky-500 hover:text-slate-950 dark:bg-slate-100 dark:text-slate-950 dark:shadow-sky-500/20 dark:hover:bg-sky-400 sm:inline-flex"
           >
