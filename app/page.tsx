@@ -203,8 +203,13 @@ export default function HomePage() {
           title="Activités parascolaires & bénévolat"
           subtitle="Quelques photos d'événements, actions et engagements associatifs."
         >
-          <div className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-slate-50/90 p-4 shadow-sm shadow-slate-900/5 dark:border-slate-800/80 dark:bg-slate-950/90 dark:shadow-slate-950/20 sm:p-6">
-            <GalleryCarousel basePath={basePath} count={18} prefix="Parascolaire" />
+          <div className="w-full">
+            <GalleryCarousel
+              basePath={basePath}
+              count={18}
+              prefix="Parascolaire"
+              variant="hero"
+            />
           </div>
         </Section>
 
