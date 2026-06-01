@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Saim Bahaeddine – Data & Digital Portfolio",
   description:
     "Portfolio de Saim Bahaeddine, étudiant en MSc Informatique & Management à l’EPITA, spécialisé en data, gouvernance, BI et projets digitaux.",
-  metadataBase: new URL("https://saimbahaeddine.github.io"),
+  metadataBase: new URL("https://bahaeddinesaim.github.io/saimbahaeddine-portfolio"),
   openGraph: {
     title: "Saim Bahaeddine – Data & Digital Portfolio",
     description:
       "Profil à l’intersection entre technologie, stratégie et valorisation de la donnée. Projets data, BI, gouvernance et web.",
-    url: "https://saimbahaeddine.github.io",
+    url: "https://bahaeddinesaim.github.io/saimbahaeddine-portfolio",
     siteName: "Portfolio – Saim Bahaeddine",
     locale: "fr_FR",
     type: "website"

@@ -1,5 +1,5 @@
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repo = "saimbahaeddine.github.io";
+const repo = "saimbahaeddine-portfolio";
 
 const nextConfig = {
   reactStrictMode: true,
