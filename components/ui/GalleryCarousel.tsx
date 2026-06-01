@@ -3,13 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-type Variant = "hero" | "cards";
-
 type Props = {
   basePath?: string;
   count?: number;
   prefix?: string;
-  variant?: Variant;
   intervalMs?: number;
 };
 
@@ -17,7 +14,6 @@ export default function GalleryCarousel({
   basePath = "",
   count = 18,
   prefix = "Parascolaire",
-  variant = "hero",
   intervalMs = 4500
 }: Props) {
   const [index, setIndex] = useState(0);
@@ -99,16 +95,16 @@ export default function GalleryCarousel({
                 }`}
                 style={{ willChange: "opacity, transform" }}
               >
-                <img
-                  src={s}
-                  alt={`Photo ${i + 1}`}
-                  style={{
-                    maxWidth: "100%",
-                    maxHeight: "80vh",
-                    objectFit: "contain"
-                  }}
-                  className="inline-block"
-                />
+                <div className="relative h-full w-full px-4 py-6 sm:px-6">
+                  <Image
+                    src={s}
+                    alt={`Photo ${i + 1}`}
+                    fill
+                    sizes="100vw"
+                    style={{ objectFit: "contain" }}
+                    className="rounded-3xl"
+                  />
+                </div>
               </div>
             );
           })}
