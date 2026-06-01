@@ -142,6 +142,70 @@ export const projects: Project[] = [
     result:
       "Prototype opérationnel livré, validé par les juristes et prêt à être industrialisé sur la plateforme interne.",
     tools: ["React", "Spring Boot", "PostgreSQL", "Figma"]
+  },
+  {
+    title: "Plateforme d’analyse prédictive des accidents routiers",
+    context:
+      "Projet Data visant à identifier les facteurs de risque routier à partir des données nationales d’accidents.",
+    year: "2025",
+    tags: ["Data Analytics", "Power BI", "PostgreSQL", "ETL"],
+    impact:
+      "Création d’indicateurs exploitables pour les collectivités afin de mieux comprendre les zones de risque et prioriser les actions de prévention.",
+    role:
+      "Data Engineering, modélisation analytique et visualisation décisionnelle.",
+    challenge:
+      "Traiter plusieurs jeux de données volumineux et produire des indicateurs exploitables par les collectivités.",
+    result:
+      "Tableaux de bord interactifs, indicateurs de gravité et analyse géographique des zones à risque.",
+    tools: ["Python", "PostgreSQL", "Power BI", "ETL", "Data Analytics"]
+  },
+  {
+    title: "Système de QA Automation pour applications web",
+    context:
+      "Développement d’une plateforme d’automatisation des tests fonctionnels et API.",
+    year: "2025",
+    tags: ["QA Automation", "CI/CD", "Tests fonctionnels", "Web"],
+    impact:
+      "Mise en place d’une suite de tests automatisés assurant une validation continue et une détection rapide des régressions.",
+    role:
+      "Conception des scénarios de tests et intégration CI/CD.",
+    challenge:
+      "Réduire les délais de validation tout en augmentant la couverture de tests.",
+    result:
+      "Suite automatisée permettant l’exécution continue des tests et la détection rapide des régressions.",
+    tools: ["Cypress", "Selenium", "Playwright", "Jenkins", "Docker"]
+  },
+  {
+    title: "Plateforme de suivi de mobilité urbaine durable",
+    context:
+      "Conception d’un système d’aide à la décision pour évaluer la mobilité dans les territoires urbains.",
+    year: "2025",
+    tags: ["Mobilité durable", "Visualisation", "Territoires", "Data"],
+    impact:
+      "Développement d’un indice de mobilité interprétable pour les décideurs publics et d’un tableau de bord territorial synthétique.",
+    role:
+      "Architecture data, définition des indicateurs et visualisation.",
+    challenge:
+      "Combiner des données de transport, d’accessibilité et d’environnement.",
+    result:
+      "Indice de mobilité interprétable et tableaux de bord destinés aux décideurs publics.",
+    tools: ["Power BI", "Python", "PostgreSQL", "Machine Learning", "Data Visualization"]
+  },
+  {
+    title: "Analyse de conformité AI Act pour systèmes d’IA",
+    context:
+      "Étude stratégique visant à évaluer la conformité de systèmes d’intelligence artificielle aux exigences européennes.",
+    year: "2025",
+    tags: ["Compliance", "AI Act", "RGPD", "Risk Assessment"],
+    impact:
+      "Production d’un registre IA et d’une matrice de conformité permettant de clarifier les obligations et les risques des systèmes d’IA.",
+    role:
+      "Cartographie réglementaire et analyse des risques.",
+    challenge:
+      "Classifier les systèmes IA selon les niveaux de risque définis par la réglementation.",
+    result:
+      "Registre IA, matrice de conformité et recommandations de gouvernance.",
+    tools: ["AI Act", "RGPD", "Risk Assessment", "Governance Framework", "Compliance"]
   }
 ];
 
