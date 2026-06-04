@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/Section";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
+import Image from "next/image";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import { Timeline } from "@/components/ui/Timeline";
 import {
@@ -103,9 +104,25 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4 lg:justify-self-end">
-              <div className="relative max-w-sm rounded-3xl border border-slate-200/90 bg-white/90 p-5 shadow-soft-glow dark:border-slate-800/90 dark:bg-slate-950/80">
+              <div className="group relative max-w-sm overflow-visible rounded-3xl border border-slate-200/90 bg-white/90 p-5 shadow-soft-glow transition-all duration-300 dark:border-slate-800/90 dark:bg-slate-950/80">
                 <div className="absolute -inset-x-10 -top-16 h-32 bg-gradient-to-br from-sky-500/25 via-indigo-500/10 to-transparent blur-3xl" />
-                <div className="relative space-y-4">
+
+                <div className="pointer-events-none absolute inset-y-0 right-0 hidden overflow-hidden rounded-[2rem] md:block md:w-[44%] md:translate-x-6 lg:w-[48%] lg:translate-x-8">
+                  <div className="absolute inset-0 bg-gradient-to-l from-white/95 via-white/50 to-transparent dark:from-slate-950/90 dark:via-slate-950/50" />
+                  <div className="absolute inset-0 overflow-hidden opacity-25 transition duration-300 group-hover:opacity-30">
+                    <Image
+                      src="/micro-nobg.png"
+                      alt=""
+                      fill
+                      sizes="320px"
+                      style={{ objectFit: "cover", objectPosition: "center right" }}
+                      className="transform transition-transform duration-300 group-hover:scale-105 blur-[0.45px]"
+                      priority={true}
+                    />
+                  </div>
+                </div>
+
+                <div className="relative z-10 space-y-4">
                   <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky-500 dark:text-sky-300">
                     Positionnement
                   </p>
