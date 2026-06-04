@@ -24,6 +24,8 @@ const basePath =
     : "";
 
 const cvUrl = `${basePath}/cv/SAIM_Bahaeddine_CV_FR.pdf`;
+const microNobgUrl = `${basePath}/img/micro-nobg.png`;
+
 
 export default function HomePage() {
   return (
@@ -111,7 +113,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-l from-white/95 via-white/50 to-transparent dark:from-slate-950/90 dark:via-slate-950/50" />
                   <div className="absolute inset-0 overflow-hidden opacity-25 transition duration-300 group-hover:opacity-30">
                     <Image
-                      src="${basePath}/img/micro-nobg.png"
+                      src={microNobgUrl}
                       alt=""
                       fill
                       sizes="320px"
