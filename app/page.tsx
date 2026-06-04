@@ -106,25 +106,27 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4 lg:justify-self-end">
-              <div className="group relative max-w-sm overflow-visible rounded-3xl border border-slate-200/90 bg-white/90 p-5 shadow-soft-glow transition-all duration-300 dark:border-slate-800/90 dark:bg-slate-950/80">
+              <div className="group relative max-w-sm overflow-hidden rounded-3xl border border-slate-200/90 bg-white/95 p-5 shadow-soft-glow transition-all duration-300 dark:border-slate-800/90 dark:bg-slate-950/80">
                 <div className="absolute -inset-x-10 -top-16 h-32 bg-gradient-to-br from-sky-500/25 via-indigo-500/10 to-transparent blur-3xl" />
 
-                <div className="pointer-events-none absolute inset-y-0 right-0 hidden overflow-hidden rounded-[2rem] md:block md:w-[44%] md:translate-x-6 lg:w-[48%] lg:translate-x-8">
-                  <div className="absolute inset-0 bg-gradient-to-l from-white/95 via-white/50 to-transparent dark:from-slate-950/90 dark:via-slate-950/50" />
-                  <div className="absolute inset-0 overflow-hidden opacity-25 transition duration-300 group-hover:opacity-30">
+                <div className="pointer-events-none absolute inset-y-0 right-0 hidden h-full overflow-hidden rounded-l-[2.5rem] md:block md:w-[36%] lg:w-[38%]">
+                  <div className="absolute inset-0 bg-slate-900/10 mix-blend-color-burn" />
+                  <div className="absolute inset-0 bg-gradient-to-l from-white/95 via-white/75 to-transparent dark:from-slate-950/95 dark:via-slate-950/70" />
+                  <div className="absolute inset-0 transition duration-300 group-hover:scale-105">
                     <Image
                       src={microNobgUrl}
-                      alt=""
+                      alt="Portrait professionnel"
                       fill
-                      sizes="320px"
-                      style={{ objectFit: "cover", objectPosition: "center right" }}
-                      className="transform transition-transform duration-300 group-hover:scale-105 blur-[0.45px]"
+                      sizes="280px"
+                      style={{ objectFit: "cover", objectPosition: "75% 20%" }}
+                      className="h-full w-full object-cover filter saturate-60 contrast-105 blur-[0.3px] opacity-40 transition duration-300"
                       priority={true}
                     />
                   </div>
+                  <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-l from-transparent to-white/100 dark:to-slate-950/100" />
                 </div>
 
-                <div className="relative z-10 space-y-4">
+                <div className="relative z-10 space-y-4 pr-0 md:pr-[40%] lg:pr-[42%]">
                   <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky-500 dark:text-sky-300">
                     Positionnement
                   </p>
@@ -134,14 +136,14 @@ export default function HomePage() {
                   </p>
 
                   <div className="grid grid-cols-2 gap-3 text-xs text-slate-700 dark:text-slate-300">
-                    <div className="rounded-2xl border border-slate-200/80 bg-slate-50 p-3 dark:border-slate-800/80 dark:bg-slate-950/80">
+                    <div className="relative z-10 rounded-2xl border border-slate-200/80 bg-white/85 p-3 shadow-soft-glow backdrop-blur-sm dark:border-slate-800/80 dark:bg-slate-950/75">
                       <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500">
                         Focales
                       </p>
                       <p>Data, BI, gouvernance, produits digitaux.</p>
                     </div>
 
-                    <div className="rounded-2xl border border-slate-200/80 bg-slate-50 p-3 dark:border-slate-800/80 dark:bg-slate-950/80">
+                    <div className="relative z-10 rounded-2xl border border-slate-200/80 bg-white/85 p-3 shadow-soft-glow backdrop-blur-sm dark:border-slate-800/80 dark:bg-slate-950/75">
                       <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500">
                         Atouts
                       </p>
