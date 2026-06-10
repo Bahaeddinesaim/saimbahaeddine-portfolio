@@ -7,11 +7,22 @@ html {
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 antialiased dark:bg-bg dark:text-slate-100;
+  @apply bg-slate-50 font-sans text-slate-900 antialiased dark:bg-bg dark:text-slate-100;
+  text-rendering: optimizeLegibility;
 }
 
 a {
   @apply text-slate-900 dark:text-slate-100;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-display;
+}
+
+::selection {
+  @apply bg-sky-300 text-slate-950;
 }
 
 .scrollbar-hide {
@@ -28,15 +39,15 @@ a {
 }
 
 .section-padding {
-  @apply py-16 sm:py-20;
+  @apply py-11 sm:py-14 lg:py-16;
 }
 
 .card-surface {
-  @apply rounded-2xl border border-slate-800/70 bg-slate-900/60 p-6 shadow-soft-glow backdrop-blur;
+  @apply rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-premium backdrop-blur-sm dark:border-slate-800/70 dark:bg-slate-950/75;
 }
 
 .pill {
-  @apply inline-flex items-center rounded-full border border-slate-700/80 bg-slate-900/80 px-3 py-1 text-xs font-medium uppercase tracking-wide text-slate-300;
+  @apply inline-flex items-center rounded-full border border-slate-300/70 bg-white/75 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-slate-700 shadow-sm shadow-slate-900/5 backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-950/70 dark:text-slate-300 dark:shadow-slate-950/20;
 }
 
 .gradient-border {
@@ -51,5 +62,43 @@ a {
   background: linear-gradient(135deg, rgba(56, 189, 248, 0.8), rgba(129, 140, 248, 0.9));
   opacity: 0.35;
   z-index: -1;
+}
+
+.reveal-on-scroll {
+  animation: reveal-up 0.7s ease both;
+}
+
+@supports (animation-timeline: view()) {
+  .reveal-on-scroll {
+    animation-timeline: view();
+    animation-range: entry 0% cover 24%;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 

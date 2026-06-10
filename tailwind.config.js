@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["system-ui", "ui-sans-serif", "sans-serif"]
+        sans: ["var(--font-inter)", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-sora)", "Sora", "ui-sans-serif", "system-ui", "sans-serif"]
       },
       colors: {
         bg: {
@@ -22,7 +23,8 @@ module.exports = {
         }
       },
       boxShadow: {
-        "soft-glow": "0 18px 60px rgba(15,23,42,0.9)"
+        "soft-glow": "0 18px 60px rgba(15,23,42,0.18)",
+        "premium": "0 20px 50px rgba(15,23,42,0.12)"
       }
     }
   },

@@ -82,11 +82,11 @@ export default function GalleryCarousel({
   const src = `${basePath}/img/${currentFilename}`;
 
   return (
-    <div className={`mt-4 ${isHero ? "" : "pb-6"}`}>
+    <div className={`mt-3 ${isHero ? "" : "pb-4"}`}>
       <div
         ref={containerRef}
         className={`relative mx-auto w-full max-w-full overflow-visible rounded-[1.25rem] ${
-          isHero ? "" : "border border-slate-200/80 bg-slate-50/90 dark:border-slate-800/80 dark:bg-slate-950/90"
+          isHero ? "" : "border border-slate-200/80 bg-white/70 shadow-sm shadow-slate-900/5 dark:border-slate-800/80 dark:bg-slate-950/80"
         }`}
         style={{
           // allow adaptive height when we know the image ratio
@@ -95,7 +95,7 @@ export default function GalleryCarousel({
       >
         {/* soft blurred background to reduce empty space */}
         <div
-          className="absolute inset-0 -z-10 bg-center bg-no-repeat bg-cover filter blur-2xl opacity-30"
+          className="absolute inset-0 -z-10 bg-center bg-no-repeat bg-cover opacity-20 blur-xl"
           style={{ backgroundImage: `url('${src}')`, transform: "scale(1.06)" }}
         />
 
@@ -110,7 +110,7 @@ export default function GalleryCarousel({
             return (
               <div
                 key={i}
-                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-600 ease-in-out ${
+                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-700 ease-in-out ${
                   isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
                 }`}
                 style={{ willChange: "opacity, transform" }}
@@ -122,7 +122,7 @@ export default function GalleryCarousel({
                     fill
                     sizes="100vw"
                     style={{ objectFit: "contain" }}
-                    className="rounded-3xl"
+                    className="rounded-2xl"
                   />
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function GalleryCarousel({
 
         {/* Dots */}
         <div className="absolute left-1/2 bottom-3 z-20 flex -translate-x-1/2 gap-2">
-          {Array.from({ length: count }).map((_, i) => (
+          {Array.from({ length: itemCount }).map((_, i) => (
             <button
               key={i}
               aria-label={`Aller à la slide ${i + 1}`}

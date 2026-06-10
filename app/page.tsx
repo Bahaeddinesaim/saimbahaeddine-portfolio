@@ -34,36 +34,36 @@ export default function HomePage() {
 
       <main id="hero" className="flex-1">
         {/* Hero */}
-        <section className="section-padding border-b border-slate-200/70 bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100 dark:border-slate-800/70 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900">
-          <div className="section-container grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-center">
-            <div className="space-y-6">
-              <p className="pill bg-slate-900/90 text-sky-300/90">
+        <section className="section-padding border-b border-slate-200/70 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.10),transparent_34%),linear-gradient(180deg,#f8fafc_0%,#eef2f7_100%)] dark:border-slate-800/70 dark:bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.18),transparent_34%),linear-gradient(180deg,#020617_0%,#0f172a_100%)]">
+          <div className="section-container grid gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-center">
+            <div className="space-y-5">
+              <p className="pill text-sky-700 dark:text-sky-300">
                 Data · Gouvernance · BI · Produits digitaux
               </p>
 
-              <div className="space-y-4">
-                <h1 className="text-balance text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-4xl lg:text-5xl">
+              <div className="space-y-3">
+                <h1 className="font-display text-balance text-4xl font-semibold tracking-tight text-slate-950 dark:text-slate-50 sm:text-5xl lg:text-6xl">
                   Saim Bahaeddine
                 </h1>
 
-                <p className="text-pretty text-xs font-medium uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400 sm:text-sm">
+                <p className="text-pretty text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 sm:text-sm">
                   MSc Informatique &amp; Management – EPITA · Ingénieur d’État
                   Informatique &amp; Gestion
                 </p>
 
-                <p className="text-pretty text-sm leading-relaxed text-slate-700 dark:text-slate-300 sm:text-base">
+                <p className="max-w-2xl text-pretty text-base leading-7 text-slate-700 dark:text-slate-200 sm:text-lg">
                   {profile.headline}
                 </p>
               </div>
 
-              <p className="max-w-xl text-pretty text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-[0.95rem]">
+              <p className="max-w-xl text-pretty text-sm leading-7 text-slate-600 dark:text-slate-300 sm:text-[0.96rem]">
                 {profile.positioning}
               </p>
 
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-3">
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/40 transition hover:bg-sky-400"
+                  className="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition duration-200 hover:-translate-y-0.5 hover:bg-sky-500 hover:text-slate-950 dark:bg-sky-400 dark:text-slate-950 dark:shadow-sky-500/20 dark:hover:bg-sky-300"
                 >
                   Discuter d’une opportunité
                 </a>
@@ -73,7 +73,7 @@ export default function HomePage() {
                   download="SAIM_Bahaeddine_CV_FR.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border border-slate-300/80 bg-white/90 px-5 py-2.5 text-sm font-medium text-slate-900 shadow-sm shadow-slate-900/10 transition hover:border-sky-500/70 hover:text-sky-600 dark:border-slate-700/80 dark:bg-slate-950/80 dark:text-slate-100 dark:shadow-slate-900/80 dark:hover:border-sky-400/70 dark:hover:text-sky-100"
+                  className="inline-flex items-center justify-center rounded-full border border-slate-300/80 bg-white/80 px-5 py-2.5 text-sm font-medium text-slate-900 shadow-sm shadow-slate-900/5 backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:border-sky-400/80 hover:text-sky-700 dark:border-slate-700/80 dark:bg-slate-950/70 dark:text-slate-100 dark:shadow-slate-900/25 dark:hover:border-sky-400/70 dark:hover:text-sky-100"
                 >
                   Télécharger mon CV
                 </a>
@@ -81,7 +81,7 @@ export default function HomePage() {
 
               <SocialLinks />
 
-              <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
+              <dl className="mt-3 flex flex-wrap gap-x-7 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
                 <div>
                   <dt className="font-semibold text-slate-700 dark:text-slate-300">
                     Localisation
@@ -106,12 +106,12 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-4 lg:justify-self-end">
-              <div className="group relative max-w-sm overflow-hidden rounded-3xl border border-slate-200/90 bg-white/95 p-5 shadow-soft-glow transition-all duration-300 dark:border-slate-800/90 dark:bg-slate-950/80">
-                <div className="absolute -inset-x-10 -top-16 h-32 bg-gradient-to-br from-sky-500/25 via-indigo-500/10 to-transparent blur-3xl" />
+              <div className="group relative max-w-sm overflow-hidden rounded-2xl border border-slate-200/80 bg-white/[0.92] p-5 shadow-premium ring-1 ring-white/70 transition-all duration-300 hover:-translate-y-1 hover:border-sky-300/70 hover:shadow-xl dark:border-slate-800/80 dark:bg-slate-950/[0.78] dark:ring-white/5">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-300/80 to-transparent" />
+                <div className="absolute -inset-x-8 -top-12 h-24 bg-gradient-to-br from-sky-400/[0.14] via-cyan-300/[0.06] to-transparent blur-2xl" />
 
-                <div className="pointer-events-none absolute inset-y-0 right-0 hidden h-full overflow-hidden rounded-l-[2.5rem] md:block md:w-[36%] lg:w-[38%]">
-                  <div className="absolute inset-0 bg-slate-900/10 mix-blend-color-burn" />
-                  <div className="absolute inset-0 bg-gradient-to-l from-white/95 via-white/75 to-transparent dark:from-slate-950/95 dark:via-slate-950/70" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 hidden h-full overflow-hidden rounded-l-[2rem] md:block md:w-[40%] lg:w-[42%]">
+                  <div className="absolute inset-0 bg-gradient-to-l from-white/80 via-white/[0.44] to-transparent dark:from-slate-950/[0.88] dark:via-slate-950/[0.48]" />
                   <div className="absolute inset-0 transition duration-300 group-hover:scale-105">
                     <Image
                       src={microNobgUrl}
@@ -119,31 +119,31 @@ export default function HomePage() {
                       fill
                       sizes="280px"
                       style={{ objectFit: "cover", objectPosition: "75% 20%" }}
-                      className="h-full w-full object-cover filter saturate-60 contrast-105 blur-[0.3px] opacity-40 transition duration-300"
+                      className="h-full w-full object-cover opacity-70 contrast-110 saturate-95 transition duration-300 group-hover:opacity-[0.82]"
                       priority={true}
                     />
                   </div>
-                  <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-l from-transparent to-white/100 dark:to-slate-950/100" />
+                  <div className="absolute inset-y-0 left-0 w-14 bg-gradient-to-l from-transparent to-white/95 dark:to-slate-950/95" />
                 </div>
 
-                <div className="relative z-10 space-y-4 pr-0 md:pr-[40%] lg:pr-[42%]">
-                  <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky-500 dark:text-sky-300">
+                <div className="relative z-10 space-y-4 pr-0 md:pr-[42%] lg:pr-[44%]">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-300">
                     Positionnement
                   </p>
 
-                  <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200">
+                  <p className="text-sm leading-7 text-slate-700 dark:text-slate-200">
                     {profile.currentStatus}
                   </p>
 
-                  <div className="grid grid-cols-2 gap-3 text-xs text-slate-700 dark:text-slate-300">
-                    <div className="relative z-10 rounded-2xl border border-slate-200/80 bg-white/85 p-3 shadow-soft-glow backdrop-blur-sm dark:border-slate-800/80 dark:bg-slate-950/75">
+                  <div className="grid grid-cols-2 gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                    <div className="relative z-10 rounded-xl border border-slate-200/80 bg-white/[0.82] p-3 shadow-sm shadow-slate-900/5 backdrop-blur-sm dark:border-slate-800/80 dark:bg-slate-900/55">
                       <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500">
                         Focales
                       </p>
                       <p>Data, BI, gouvernance, produits digitaux.</p>
                     </div>
 
-                    <div className="relative z-10 rounded-2xl border border-slate-200/80 bg-white/85 p-3 shadow-soft-glow backdrop-blur-sm dark:border-slate-800/80 dark:bg-slate-950/75">
+                    <div className="relative z-10 rounded-xl border border-slate-200/80 bg-white/[0.82] p-3 shadow-sm shadow-slate-900/5 backdrop-blur-sm dark:border-slate-800/80 dark:bg-slate-900/55">
                       <p className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-500">
                         Atouts
                       </p>
